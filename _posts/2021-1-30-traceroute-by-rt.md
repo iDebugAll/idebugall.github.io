@@ -509,7 +509,6 @@ And here is a complete solution!
 <summary>The Code</summary>
 
 ```python
-
 import os
 import re
 import pytricia
