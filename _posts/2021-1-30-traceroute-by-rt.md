@@ -843,6 +843,7 @@ if __name__ == "__main__":
 
 </details>
 
+
 How do we not it is working? Of course, let's do some test. 
 
 ## Testing
@@ -985,6 +986,7 @@ D     192.168.204.0/24
 ```
 
 </details>
+
 <details>
 <summary>csr1000v-04#show ip route</summary>
 
@@ -1036,6 +1038,7 @@ L        192.168.204.204/32 is directly connected, Loopback204
 
 Let's save *show ip route* files into separate files named by hostnames inside *./routing_tables/* directory.
 Now we can run the script:
+
 <details>
 <summary>$ python3.7 traceroute_by_routing_tables.py</summary>
 
@@ -1056,6 +1059,7 @@ All files have been initialized in 0.003 sec
 
 Enter Target Subnet or Host:
 ```
+
 </details>
 
 
@@ -1066,6 +1070,7 @@ Let's put several IP-addresses subsequently and compare the output with the data
 <summary>Looking up paths to 192.168.204.204 (Loopback204 on csr1000v-04)</summary>
 
 All the routers should have paths to this destination.
+
 <details>
 <summary>Enter Target Subnet or Host: 192.168.204.204</summary>
 
@@ -1161,6 +1166,7 @@ Full search has been completed in 0.001 sec
 </details>
 
 The script found some paths. Now let's check the route selection right on csr1000v-01:
+
 <details>
 <summary>csr1000v-01#show ip route 192.168.204.204</summary>
 
@@ -1184,10 +1190,12 @@ Routing entry for 192.168.204.0/24
 ```
 
 </details>
+
 csr1000v-01 displays two equal-cost router learned by EIGRP through csr1000v-02 and csr1000v-03. 
 The script returns both available paths: ['csr1000v-01', 'csr1000v-03', 'csr1000v-04'] and ['csr1000v-01', 'csr1000v-02', 'csr1000v-04'].<br/>
 
 To be sure:
+
 <details>
 <summary>csr1000v-02#show ip route 192.168.204.204</summary>
 
@@ -1206,6 +1214,7 @@ Routing entry for 192.168.204.0/24
 ```
 
 </details>
+
 <details>
 <summary>csr1000v-03#show ip route 192.168.204.204</summary>
 
@@ -1223,6 +1232,7 @@ Routing entry for 192.168.204.0/24
       Loading 1/255, Hops 1
 ```
 </details>
+
 <details>
 <summary>csr1000v-04#show ip route 192.168.204.204</summary>
 
@@ -1358,6 +1368,7 @@ Full search has been completed in 0.004 sec
 </details>
 
 We've got result. Let's check the routers:
+
 <details>
 <summary>csr1000v-01#show ip route 10.10.10.0 255.255.255.0</summary>
 
@@ -1373,6 +1384,7 @@ Routing entry for 10.0.0.0/8
 ```
 
 </details>
+
 <details>
 <summary>csr1000v-04#show ip route 10.10.10.0 255.255.255.0</summary>
 
@@ -1388,6 +1400,7 @@ Routing entry for 10.0.0.0/8
 ```
 
 </details>
+
 As discussed, csr1000v-01 and csr1000v-04 have equal-cost static routes to a wide 10.0.0.0/8 network pointing to each other through the tunnel interfaces. It creates a routing loop. The script successfully detects this and shows both paths for each:
 
 ```
@@ -1413,6 +1426,7 @@ csr1000v-02#show ip route 10.10.10.0 255.255.255.0
 ```
 
 </details>
+
 <details>
 <summary>csr1000v-3#show ip route 10.10.10.0 255.255.255.0</summary>
 
@@ -1422,8 +1436,11 @@ csr1000v-3#show ip route 10.10.10.0 255.255.255.0
 ``` 
 
 </details>
+
 csr1000v-02 and csr1000v-03 have no route to such destination. The script shows the same result.
+
 </details>
+
 All common test cases are covered. The script result matches the output we get from the actual network devices using CLI.
 
 ## Conclusion
