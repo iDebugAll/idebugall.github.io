@@ -3,8 +3,9 @@ layout: post
 title: Implementing Offline traceroute Tool Using Python
 ---
 
+This post demonstrates an interesting use-case of radix tries usage for Longest Prefix Match.
 
-Hey everyone! This post was born from a question asked by an IT forum member. The summary of the question looked as follows: 
+The post was born from a question asked by an IT forum member. The summary of the question looked as follows: 
 
 - There is a set of text files containing routing tables collected from various network devices.
 - Each file represents one device.
