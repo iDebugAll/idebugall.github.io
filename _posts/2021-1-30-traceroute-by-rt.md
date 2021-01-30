@@ -503,6 +503,7 @@ if __name__ == "__main__":
 ```
 
 And here is a complete solution!
+
 <details>
 <summary>The Code</summary>
 
@@ -1060,6 +1061,7 @@ Let's put several IP-addresses subsequently and compare the output with the data
 
 <details>
 <summary>Looking up paths to 192.168.204.204 (Loopback204 on csr1000v-04)</summary>
+
 All the routers should have paths to this destination.
 <details>
 <summary>Enter Target Subnet or Host: 192.168.204.204</summary>
@@ -1239,6 +1241,7 @@ The script output is correct: ['csr1000v-02', 'csr1000v-04'] from csr1000v-02, [
 
 <details>
 <summary>Looking up 10.10.10.0/24 (does not exist in the topology). Also a routing loop test case.</summary>
+
 <details>
 <summary>Enter Target Subnet or Host: 10.10.10.0/24</summary>
 
