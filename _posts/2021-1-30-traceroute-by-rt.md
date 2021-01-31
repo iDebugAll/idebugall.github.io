@@ -739,7 +739,7 @@ All the routers should have paths to this destination.
 <details>
 <summary>Enter Target Subnet or Host: 192.168.204.204</summary>
 
-```
+<pre>
 Enter Target Subnet or Host: 192.168.204.204
 
 
@@ -826,7 +826,7 @@ L        192.168.204.204/32 is directly connected, Loopback204
 Path search on csr1000v-01 has been completed in 0.000 sec
 
 Full search has been completed in 0.001 sec
-```
+</pre>
 
 </details>
 
@@ -835,7 +835,7 @@ The script found some paths. Now let's check the route selection right on csr100
 <details>
 <summary>csr1000v-01#show ip route 192.168.204.204</summary>
 
-```
+<pre>
 csr1000v-01#show ip route 192.168.204.204
 Routing entry for 192.168.204.0/24
   Known via "eigrp 200", distance 90, metric 131072, type internal
@@ -852,7 +852,7 @@ Routing entry for 192.168.204.0/24
       Total delay is 5020 microseconds, minimum bandwidth is 1000000 Kbit
       Reliability 255/255, minimum MTU 1500 bytes
       Loading 1/255, Hops 2
-```
+</pre>
 
 </details>
 
@@ -864,7 +864,7 @@ To be sure:
 <details>
 <summary>csr1000v-02#show ip route 192.168.204.204</summary>
 
-```
+<pre>
 csr1000v-02#show ip route 192.168.204.204
 Routing entry for 192.168.204.0/24
   Known via "eigrp 200", distance 90, metric 130816, type internal
@@ -876,14 +876,14 @@ Routing entry for 192.168.204.0/24
       Total delay is 5010 microseconds, minimum bandwidth is 1000000 Kbit
       Reliability 255/255, minimum MTU 1500 bytes
       Loading 1/255, Hops 1
-```
+</pre>
 
 </details>
 
 <details>
 <summary>csr1000v-03#show ip route 192.168.204.204</summary>
 
-```
+<pre>
 csr1000v-3#show ip route 192.168.204.204
 Routing entry for 192.168.204.0/24
   Known via "eigrp 200", distance 90, metric 130816, type internal
@@ -895,20 +895,21 @@ Routing entry for 192.168.204.0/24
       Total delay is 5010 microseconds, minimum bandwidth is 1000000 Kbit
       Reliability 255/255, minimum MTU 1500 bytes
       Loading 1/255, Hops 1
-```
+</pre>
+
 </details>
 
 <details>
 <summary>csr1000v-04#show ip route 192.168.204.204</summary>
 
-```
+<pre>
 csr1000v-04#show ip route 192.168.204.204
 Routing entry for 192.168.204.204/32
   Known via "connected", distance 0, metric 0 (connected)
   Routing Descriptor Blocks:
   * directly connected, via Loopback204
       Route metric is 0, traffic share count is 1
-```
+</pre>
 
 </details>
 
@@ -923,7 +924,7 @@ The script output is correct: ['csr1000v-02', 'csr1000v-04'] from csr1000v-02, [
 <details>
 <summary>Enter Target Subnet or Host: 10.10.10.0/24</summary>
 
-```
+<pre>
 Enter Target Subnet or Host: 10.10.10.0/24
 
 PATHS TO 10.10.10.0/24 FROM csr1000v-04
@@ -1028,7 +1029,7 @@ None
 Path search on csr1000v-01 has been completed in 0.003 sec
 
 Full search has been completed in 0.004 sec
-```
+</pre>
 
 </details>
 
@@ -1037,7 +1038,7 @@ We've got result. Let's check the routers:
 <details>
 <summary>csr1000v-01#show ip route 10.10.10.0 255.255.255.0</summary>
 
-```
+<pre>
 csr1000v-01#show ip route 10.10.10.0 255.255.255.0
 Routing entry for 10.0.0.0/8
   Known via "static", distance 1, metric 0
@@ -1046,14 +1047,14 @@ Routing entry for 10.0.0.0/8
       Route metric is 0, traffic share count is 1
     192.168.141.2
       Route metric is 0, traffic share count is 1
-```
+</pre>
 
 </details>
 
 <details>
 <summary>csr1000v-04#show ip route 10.10.10.0 255.255.255.0</summary>
 
-```
+<pre>
 csr1000v-04#show ip route 10.10.10.0 255.255.255.0
 Routing entry for 10.0.0.0/8
   Known via "static", distance 1, metric 0
@@ -1062,13 +1063,13 @@ Routing entry for 10.0.0.0/8
       Route metric is 0, traffic share count is 1
   * 192.168.141.1
       Route metric is 0, traffic share count is 1
-```
+</pre>
 
 </details>
 
 As discussed, csr1000v-01 and csr1000v-04 have equal-cost static routes to a wide 10.0.0.0/8 network pointing to each other through the tunnel interfaces. It creates a routing loop. The script successfully detects this and shows both paths for each:
 
-```
+<pre>
 PATHS TO 10.10.10.0/24 FROM csr1000v-01
 Path 1:
 ['csr1000v-01', 'csr1000v-04', 'csr1000v-01<<LOOP DETECTED']
@@ -1080,25 +1081,25 @@ Path 1:
 ['csr1000v-04', 'csr1000v-01', 'csr1000v-04<<LOOP DETECTED']
 Path 2:
 ['csr1000v-04', 'csr1000v-01', 'csr1000v-04<<LOOP DETECTED']
-```
+</pre>
 
 <details>
 <summary>csr1000v-02#show ip route 10.10.10.0 255.255.255.0</summary>
 
-```
+<pre>
 csr1000v-02#show ip route 10.10.10.0 255.255.255.0
 % Network not in table
-```
+</pre>
 
 </details>
 
 <details>
 <summary>csr1000v-3#show ip route 10.10.10.0 255.255.255.0</summary>
 
-```
+<pre>
 csr1000v-3#show ip route 10.10.10.0 255.255.255.0
 % Network not in table
-``` 
+</pre> 
 
 </details>
 
