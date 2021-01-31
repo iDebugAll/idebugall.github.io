@@ -134,7 +134,6 @@ C    10.86.194.0 255.255.254.0 is directly connected, outside
 S*   0.0.0.0 0.0.0.0 [1/0] via 10.86.194.1, outside
 ```
 
-</details>
 
 <br/>
 
