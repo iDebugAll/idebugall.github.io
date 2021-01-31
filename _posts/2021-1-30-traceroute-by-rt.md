@@ -502,13 +502,11 @@ And here is a [complete solution](https://github.com/iDebugAll/toolz/blob/master
 
 <details>
   <summary>
-    <p>The Code.</p>
+    The Code.
   </summary>
-  <div class="spoiler-body">
  
-<script src="https://gist.github.com/iDebugAll/feef8e4339c66a92bb15ec1f87165075.js"></script>
+    <script src="https://gist.github.com/iDebugAll/feef8e4339c66a92bb15ec1f87165075.js"></script>
 
-</div>
 </details>
 
 How do we not it is working? Of course, let's do some testing. 
@@ -522,9 +520,8 @@ They are interconnected with GigabitEthernet 2 and 3 interfaces. All adjacent ro
 
 <details>
 <summary>csr1000v-01#show ip route</summary>
-<div class="spoiler-body">
 
-```
+<code>
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -569,9 +566,8 @@ D     192.168.203.0/24
 D     192.168.204.0/24 
            [90/131072] via 192.168.13.203, 00:06:56, GigabitEthernet3
            [90/131072] via 192.168.12.202, 00:06:56, GigabitEthernet2
-```
+</code>
 
-</div>
 </details>
 
 <details>
