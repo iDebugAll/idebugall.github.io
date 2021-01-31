@@ -82,8 +82,8 @@ RT_DIRECTORY = "./routing_tables"
 ```
 
 Here is a reference of IOS and IOS-XE routing table output format:
-<details>
-<summary>show ip route</summary>
+
+*show ip route*
 
 ```
 S* 0.0.0.0/0 [1/0] via 10.220.88.1
@@ -122,13 +122,11 @@ O E2 212.0.0.0/8 [110/20] via 194.0.0.2, 00:05:35, FastEthernet0/0
 C    194.0.0.0/16 is directly connected, FastEthernet0/0
 ```
 
-</details>
-
 <br/>
 
 Cisco ASA looks very similar. The difference is ASA displays full subnet masks instead of prefix lengths:
-<details>
-<summary>show route</summary>
+
+*show route*
 
 ```
 S    10.1.1.0 255.255.255.0 [3/0] via 10.86.194.1, outside
