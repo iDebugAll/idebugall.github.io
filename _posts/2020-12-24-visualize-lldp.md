@@ -7,7 +7,6 @@ This is a follow-up article on a local Cisco Russia DevNet Marathon online event
 On a final day, the participants were challenged to automate a topology analysis and visualization of an arbitrary network segment and, optionally, track and visualize the changes.<br>
 
 The task was definitely not trivial and not widely covered in public blog posts. In this article, I would like to break down my own solution that finally took first place and describe the selected toolset and considerations.<br><br>
-Let's get started.
 
 ![](https://habrastorage.org/webt/5h/zi/p1/5hzip10y5vl8l71jpwwfmqp-xes.png)
 
