@@ -421,7 +421,7 @@ Total entries displayed: 5
 </details>
 
 <details>
-<summary>show lldp neighbors detail from NXOS-based dist-sw01</summary>
+<summary>"show lldp neighbors detail" from NXOS-based dist-sw01</summary>
 
 ```
 dist-sw01# show lldp neighbors detail
