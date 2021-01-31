@@ -11,6 +11,7 @@ Let's get started.
 
 ![](https://habrastorage.org/webt/5h/zi/p1/5hzip10y5vl8l71jpwwfmqp-xes.png)
 
+<cut/>
 ___
 
 ### Disclaimer
