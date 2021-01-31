@@ -502,7 +502,7 @@ And here is a [complete solution](https://github.com/iDebugAll/toolz/blob/master
 
 <details>
   <summary>
-    The Code.
+    <p>The Code.</p>
   </summary>
   <div class="spoiler-body">
  
