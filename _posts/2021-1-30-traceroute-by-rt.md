@@ -501,8 +501,10 @@ if __name__ == "__main__":
 And here is a [complete solution](https://github.com/iDebugAll/toolz/blob/master/traceroute_by_routing_tables/traceroute_by_routing_tables.py)!
 
 <details>
-<summary>The Code.</summary>
-<div class="spoiler-body">
+  <summary>
+    The Code.
+  </summary>
+  <div class="spoiler-body">
  
 <script src="https://gist.github.com/iDebugAll/feef8e4339c66a92bb15ec1f87165075.js"></script>
 
