@@ -19,8 +19,6 @@ I found this task interesting and also applicable to my own needs, so I decided 
 
 In this article, I’ll try to reconstruct the resulting script development process and my considerations behind each step.
 
-Let’s get started. 
-
 <cut/>
 
 ## Disclaimer
