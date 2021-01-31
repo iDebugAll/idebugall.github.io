@@ -258,7 +258,7 @@ In this case, a topology analysis task as a whole can be reduced to the analysis
 
 In our lab environment, all edge, core, and distribution layer devices should see their direct LLDP neighbors. internet-rtr01 is isolated from the rest of the network so it should not have any LLDP neighbors.<br/>
 
-Here is a manual *" show lldp neighbors"* output from dist-rtr01:
+Here is a manual *"show lldp neighbors"* output from dist-rtr01:
 ```
 dist-rtr01#show lldp neighbors
 Capability codes:
@@ -299,8 +299,7 @@ In our given case the workaround is to use a detailed output format.<br/>
 As an example:
 
 <details>
-<summary>"'show lldp neighbors detail' from IOSXE-based dist-rtr01"</summary>
-
+<summary>"show lldp neighbors detail" from IOSXE-based dist-rtr01</summary>
 
 ```
 dist-rtr01#show lldp neighbors detail
@@ -421,7 +420,7 @@ Total entries displayed: 5
 
 </details>
 
-<detaisl>
+<details>
 <summary>show lldp neighbors detail from NXOS-based dist-sw01</summary>
 
 ```
