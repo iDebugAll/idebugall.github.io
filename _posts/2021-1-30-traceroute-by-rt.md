@@ -521,7 +521,7 @@ They are interconnected with GigabitEthernet 2 and 3 interfaces. All adjacent ro
 <details>
 <summary>csr1000v-01#show ip route</summary>
 
-<code>
+<pre>
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -566,14 +566,14 @@ D     192.168.203.0/24
 D     192.168.204.0/24 
            [90/131072] via 192.168.13.203, 00:06:56, GigabitEthernet3
            [90/131072] via 192.168.12.202, 00:06:56, GigabitEthernet2
-</code>
+</pre>
 
 </details>
 
 <details>
 <summary>csr1000v-02#show ip route</summary>
 
-```
+<pre>
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -607,14 +607,14 @@ D     192.168.203.0/24
            [90/131072] via 192.168.12.201, 00:06:31, GigabitEthernet2
 D     192.168.204.0/24 
            [90/130816] via 192.168.24.204, 00:37:26, GigabitEthernet3
-```
+</pre>
 
 </details>
 
 <details>
 <summary>csr1000v-03#show ip route</summary>
 
-```
+<pre>
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -648,14 +648,14 @@ C        192.168.203.0/24 is directly connected, Loopback203
 L        192.168.203.203/32 is directly connected, Loopback203
 D     192.168.204.0/24 
            [90/130816] via 192.168.34.204, 00:37:22, GigabitEthernet2
-```
+</pre>
 
 </details>
 
 <details>
 <summary>csr1000v-04#show ip route</summary>
 
-```
+<pre>
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -697,7 +697,7 @@ D     192.168.203.0/24
       192.168.204.0/24 is variably subnetted, 2 subnets, 2 masks
 C        192.168.204.0/24 is directly connected, Loopback204
 L        192.168.204.204/32 is directly connected, Loopback204
-```
+</pre>
 
 </details>
 
@@ -707,7 +707,7 @@ Now we can run the script:
 <details>
 <summary>$ python3.7 traceroute_by_routing_tables.py</summary>
 
-```
+<pre>
 $ python3.7 traceroute_by_routing_tables.py
 Initializing files...
 Opening csr1000v-01.txt
@@ -723,7 +723,7 @@ All files have been initialized in 0.003 sec
 
 
 Enter Target Subnet or Host:
-```
+</pre>
 
 </details>
 
