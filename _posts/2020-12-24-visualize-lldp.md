@@ -299,7 +299,7 @@ In our given case the workaround is to use a detailed output format.<br/>
 As an example:
 
 <details>
-<summary>show lldp neighbors detail' from IOSXE-based dist-rtr01</summary>
+<summary>"'show lldp neighbors detail' from IOSXE-based dist-rtr01"</summary>
 
 
 ```
