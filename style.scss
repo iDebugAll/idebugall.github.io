@@ -287,3 +287,12 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+// GitHub Gists custom styles
+.gist{font-size:13px;line-height:18px;width:53em}
+.gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+.gist-meta{font-family:Arial,sans-serif;font-size:13px !important}
+.gist-meta a{color:#3b5998 !important;font-weight:bold;text-decoration:none}
+.gist-meta a:hover{text-decoration:underline}
+
