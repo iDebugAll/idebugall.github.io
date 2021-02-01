@@ -104,6 +104,10 @@ ol {
   list-style-type: decimal;
 }
 
+ul li {
+  margin-bottom:5px;
+}
+
 ol ul, ul ol, ul ul, ol ol {
   margin: 0;
 }
