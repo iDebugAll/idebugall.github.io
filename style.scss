@@ -129,14 +129,14 @@ img {
   max-width: none;
 }
 
-share-box {
-  padding-bottom: 20px;
-  display: inline-block;
-}
-
 .date {
   font-style: italic;
   color: $gray;
+}
+
+#share-box {
+  padding-bottom: 20px;
+  display: inline-block;
 }
 
 // Specify the color of the selection
