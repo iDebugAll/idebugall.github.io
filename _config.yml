@@ -6,9 +6,8 @@
 name: iDebugAll - Igor Korotchenkov's Blog
 
 # Short bio or description (displayed in the header)
-description: |
-  NetDevOps, Programming, and Common Sense.<br/>
-  Trust me. I'm an engineer.
+description: NetDevOps, Programming, and Common Sense.
+description-secondary: Trust me. I'm an engineer.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/32979193?s=460&u=60cf50569ef11fd8fcdcb27f7705c1e9f7267291&v=4
