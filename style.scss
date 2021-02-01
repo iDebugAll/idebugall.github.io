@@ -75,6 +75,12 @@ details {
   margin: 15px 0;
 }
 
+summary {
+  font: $Serif;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
 a {
   color: $blue;
   text-decoration: none;
@@ -123,8 +129,8 @@ img {
   max-width: none;
 }
 
-.share-box {
-  padding-bottom: 1em;
+share-box {
+  padding-bottom: 20px;
 }
 
 .date {
