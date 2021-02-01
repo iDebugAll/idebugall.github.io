@@ -233,6 +233,16 @@ img {
   }
 }
 
+.site-description-secondary {
+  margin: -5px 0 0 0;
+  color: $gray;
+  font-size: 14px;
+
+  @include mobile {
+    margin: 3px 0;
+  }
+}
+
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
