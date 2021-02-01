@@ -1259,6 +1259,7 @@ Now let's finally run **main.html** and see our visualization Hello World:<br/>
 Looks correct. All known nodes and links between them are displayed.<br/>
 The nodes are draggable in any direction. On mouse click on nodes and links, a Next UI tooltip menu appears. It contains all the attributes we previously passed into node and link topology objects in Python:<br/>
 ![](https://habrastorage.org/webt/d8/hn/j1/d8hnj1fe0u5xduawmcw5ce2t720.png)
+<br/>
 Not so bad. There is also room for improvement. We will return to this some later on. Let's implement a solution for the second part of the task for now.
 
 # Detecting and visualizing topology changes
