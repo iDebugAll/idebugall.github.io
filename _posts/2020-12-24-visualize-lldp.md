@@ -301,7 +301,7 @@ As an example:
 <details>
 <summary>"show lldp neighbors detail" from IOSXE-based dist-rtr01</summary>
 
-```
+<pre>
 dist-rtr01#show lldp neighbors detail
 ------------------------------------------------
 Local Intf: Gi6
@@ -416,14 +416,14 @@ Vlan ID: - not advertised
 
 
 Total entries displayed: 5
-```
+</pre>
 
 </details>
 
 <details>
 <summary>"show lldp neighbors detail" from NXOS-based dist-sw01</summary>
 
-```
+<pre>
 dist-sw01# show lldp neighbors detail
 Capability codes:
   (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
@@ -496,7 +496,7 @@ Management Address IPV6: not advertised
 Vlan ID: not advertised
 
 Total entries displayed: 4
-```
+</pre>
 
 </details>
 
@@ -519,7 +519,7 @@ Thereby the following scenarios will be covered:
 <details>
 <summary>Full inventory/hosts_devnet_sb_cml.yml hosts file content</summary>
 
-```yaml
+<pre>
 ---
 
 internet-rtr01:
@@ -576,7 +576,7 @@ dist-sw02:
     groups:
         - devnet-cml-lab
 
-```
+</pre>
 
 </details>
 
@@ -636,20 +636,20 @@ Some complete result outputs for the reference:
 <details>
 <summary>Result object content for dist-rtr01</summary>
 
-```python
+<pre>
 >>> get_host_data_result['dist-rtr01'][1].result
 {'facts': {'uptime': 6120, 'vendor': 'Cisco', 'os_version': 'Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1b, RELEASE SOFTWARE (fc2)', 'serial_number': '9JDCOVUDSWN', 'model': 'CSR1000V', 'hostname': 'dist-rtr01', 'fqdn': 'dist-rtr01.devnet.lab', 'interface_list': ['GigabitEthernet1', 'GigabitEthernet2', 'GigabitEthernet3', 'GigabitEthernet4', 'GigabitEthernet5', 'GigabitEthernet6', 'Loopback0']}, 'lldp_neighbors_detail': {'GigabitEthernet6': [{'remote_chassis_id': '001e.e57c.cf00', 'remote_port': 'Gi6', 'remote_port_description': 'L3 Link to dist-rtr01', 'remote_system_name': 'dist-rtr02.devnet.lab', 'remote_system_description': 'Cisco IOS Software [Gibraltar], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1b, RELEASE SOFTWARE (fc2)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}], 'GigabitEthernet4': [{'remote_chassis_id': '5254.0007.5d59', 'remote_port': 'Ethernet1/3', 'remote_port_description': 'L3 link to dist-rtr01', 'remote_system_name': 'dist-sw01.devnet.lab', 'remote_system_description': 'Cisco Nexus Operating System (NX-OS) Software 9.2(3)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['bridge', 'router'], 'parent_interface': ''}], 'GigabitEthernet5': [{'remote_chassis_id': '5254.0007.b7e6', 'remote_port': 'Ethernet1/3', 'remote_port_description': 'L3 link to dist-rtr01', 'remote_system_name': 'dist-sw02.devnet.lab', 'remote_system_description': 'Cisco Nexus Operating System (NX-OS) Software 9.2(3)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['bridge', 'router'], 'parent_interface': ''}], 'GigabitEthernet3': [{'remote_chassis_id': '02c7.9dc0.0c06', 'remote_port': 'Gi0/0/0/2', 'remote_port_description': 'L3 Link to dist-rtr01', 'remote_system_name': 'core-rtr02.devnet.lab', 'remote_system_description': 'Cisco IOS XR Software, Version 6.3.1[Default]', 'remote_system_capab': ['router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}], 'GigabitEthernet2': [{'remote_chassis_id': '0288.15c0.0c06', 'remote_port': 'Gi0/0/0/2', 'remote_port_description': 'L3 Link to dist-rtr01', 'remote_system_name': 'core-rtr01.devnet.lab', 'remote_system_description': 'Cisco IOS XR Software, Version 6.3.1[Default]', 'remote_system_capab': ['router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}]}}
-```
+</pre>
 
 </details>
 
 <details>
 <summary>Result object content for dist-sw01</summary>
 
-```python
+<pre>
 >>> get_host_data_result['dist-sw01'][1].result
 {'facts': {'uptime': 6090, 'vendor': 'Cisco', 'os_version': '9.2(3)', 'serial_number': '9P5OMCCMSQ4', 'model': 'Nexus9000 9000v Chassis', 'hostname': 'dist-sw01', 'fqdn': 'dist-sw01.devnet.lab', 'interface_list': ['mgmt0', 'Ethernet1/1', 'Ethernet1/2', 'Ethernet1/3', 'Ethernet1/4', 'Ethernet1/5', 'Ethernet1/6', 'Ethernet1/7', 'Ethernet1/8', 'Ethernet1/9', 'Ethernet1/10', 'Ethernet1/11', 'Ethernet1/12', 'Ethernet1/13', 'Ethernet1/14', 'Ethernet1/15', 'Ethernet1/16', 'Ethernet1/17', 'Ethernet1/18', 'Ethernet1/19', 'Ethernet1/20', 'Ethernet1/21', 'Ethernet1/22', 'Ethernet1/23', 'Ethernet1/24', 'Ethernet1/25', 'Ethernet1/26', 'Ethernet1/27', 'Ethernet1/28', 'Ethernet1/29', 'Ethernet1/30', 'Ethernet1/31', 'Ethernet1/32', 'Ethernet1/33', 'Ethernet1/34', 'Ethernet1/35', 'Ethernet1/36', 'Ethernet1/37', 'Ethernet1/38', 'Ethernet1/39', 'Ethernet1/40', 'Ethernet1/41', 'Ethernet1/42', 'Ethernet1/43', 'Ethernet1/44', 'Ethernet1/45', 'Ethernet1/46', 'Ethernet1/47', 'Ethernet1/48', 'Ethernet1/49', 'Ethernet1/50', 'Ethernet1/51', 'Ethernet1/52', 'Ethernet1/53', 'Ethernet1/54', 'Ethernet1/55', 'Ethernet1/56', 'Ethernet1/57', 'Ethernet1/58', 'Ethernet1/59', 'Ethernet1/60', 'Ethernet1/61', 'Ethernet1/62', 'Ethernet1/63', 'Ethernet1/64', 'Ethernet1/65', 'Ethernet1/66', 'Ethernet1/67', 'Ethernet1/68', 'Ethernet1/69', 'Ethernet1/70', 'Ethernet1/71', 'Ethernet1/72', 'Ethernet1/73', 'Ethernet1/74', 'Ethernet1/75', 'Ethernet1/76', 'Ethernet1/77', 'Ethernet1/78', 'Ethernet1/79', 'Ethernet1/80', 'Ethernet1/81', 'Ethernet1/82', 'Ethernet1/83', 'Ethernet1/84', 'Ethernet1/85', 'Ethernet1/86', 'Ethernet1/87', 'Ethernet1/88', 'Ethernet1/89', 'Ethernet1/90', 'Ethernet1/91', 'Ethernet1/92', 'Ethernet1/93', 'Ethernet1/94', 'Ethernet1/95', 'Ethernet1/96', 'Ethernet1/97', 'Ethernet1/98', 'Ethernet1/99', 'Ethernet1/100', 'Ethernet1/101', 'Ethernet1/102', 'Ethernet1/103', 'Ethernet1/104', 'Ethernet1/105', 'Ethernet1/106', 'Ethernet1/107', 'Ethernet1/108', 'Ethernet1/109', 'Ethernet1/110', 'Ethernet1/111', 'Ethernet1/112', 'Ethernet1/113', 'Ethernet1/114', 'Ethernet1/115', 'Ethernet1/116', 'Ethernet1/117', 'Ethernet1/118', 'Ethernet1/119', 'Ethernet1/120', 'Ethernet1/121', 'Ethernet1/122', 'Ethernet1/123', 'Ethernet1/124', 'Ethernet1/125', 'Ethernet1/126', 'Ethernet1/127', 'Ethernet1/128', 'Port-channel1', 'Loopback0', 'Vlan1', 'Vlan101', 'Vlan102', 'Vlan103', 'Vlan104', 'Vlan105']}, 'lldp_neighbors_detail': {'Ethernet1/1': [{'remote_chassis_id': '5254.0007.b7e4', 'remote_port': 'Ethernet1/1', 'remote_port_description': 'VPC Peer Link', 'remote_system_name': 'dist-sw02.devnet.lab', 'remote_system_description': 'Cisco Nexus Operating System (NX-OS) Software 9.2(3)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['bridge', 'router'], 'parent_interface': ''}], 'Ethernet1/2': [{'remote_chassis_id': '5254.0007.b7e5', 'remote_port': 'Ethernet1/2', 'remote_port_description': 'VPC Peer Link', 'remote_system_name': 'dist-sw02.devnet.lab', 'remote_system_description': 'Cisco Nexus Operating System (NX-OS) Software 9.2(3)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['bridge', 'router'], 'parent_interface': ''}], 'Ethernet1/3': [{'remote_chassis_id': '001e.7a2a.3900', 'remote_port': 'Gi4', 'remote_port_description': 'L3 Link to dist-sw01', 'remote_system_name': 'dist-rtr01.devnet.lab', 'remote_system_description': 'Cisco IOS Software [Gibraltar], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1b, RELEASE SOFTWARE (fc2)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}], 'Ethernet1/4': [{'remote_chassis_id': '001e.e57c.cf00', 'remote_port': 'Gi4', 'remote_port_description': 'L3 Link to dist-sw01', 'remote_system_name': 'dist-rtr02.devnet.lab', 'remote_system_description': 'Cisco IOS Software [Gibraltar], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1b, RELEASE SOFTWARE (fc2)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}]}}
-```
+</pre>
 
 </details>
 
@@ -660,7 +660,7 @@ Let's compare a neighbor sets:
 <details>
 <summary>LLDP neigbors of dist-rtr01</summary>
 
-```python
+<pre>
 >>> for neighbor in get_host_data_result['dist-rtr01'][1].result['lldp_neighbors_detail'].items():
 ...     print(neighbor)
 ...     print('\n')
@@ -674,14 +674,14 @@ Let's compare a neighbor sets:
 ('GigabitEthernet3', [{'remote_chassis_id': '02c7.9dc0.0c06', 'remote_port': 'Gi0/0/0/2', 'remote_port_description': 'L3 Link to dist-rtr01', 'remote_system_name': 'core-rtr02.devnet.lab', 'remote_system_description': 'Cisco IOS XR Software, Version 6.3.1[Default]', 'remote_system_capab': ['router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}])
 
 ('GigabitEthernet2', [{'remote_chassis_id': '0288.15c0.0c06', 'remote_port': 'Gi0/0/0/2', 'remote_port_description': 'L3 Link to dist-rtr01', 'remote_system_name': 'core-rtr01.devnet.lab', 'remote_system_description': 'Cisco IOS XR Software, Version 6.3.1[Default]', 'remote_system_capab': ['router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}])
-```
+</pre>
 
 </details>
 
 <details>
 <summary>LLDP neigbors of dist-sw01</summary>
 
-```python
+<pre>
 >>> for neighbor in get_host_data_result['dist-sw01'][1].result['lldp_neighbors_detail'].items():
 ...     print(neighbor)
 ...     print('\n')
@@ -693,7 +693,7 @@ Let's compare a neighbor sets:
 ('Ethernet1/3', [{'remote_chassis_id': '001e.7a2a.3900', 'remote_port': 'Gi4', 'remote_port_description': 'L3 Link to dist-sw01', 'remote_system_name': 'dist-rtr01.devnet.lab', 'remote_system_description': 'Cisco IOS Software [Gibraltar], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1b, RELEASE SOFTWARE (fc2)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}])
 
 ('Ethernet1/4', [{'remote_chassis_id': '001e.e57c.cf00', 'remote_port': 'Gi4', 'remote_port_description': 'L3 Link to dist-sw01', 'remote_system_name': 'dist-rtr02.devnet.lab', 'remote_system_description': 'Cisco IOS Software [Gibraltar], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.11.1b, RELEASE SOFTWARE (fc2)', 'remote_system_capab': ['bridge', 'router'], 'remote_system_enable_capab': ['router'], 'parent_interface': ''}])
-```
+</pre>
 
 </details>
 
@@ -1066,7 +1066,7 @@ write_topology_file(TOPOLOGY_DICT)
 <details>
 <summary>Resulting topology.js file content</summary>
 
-```javascript
+<pre>
 
 var topologyData = {
     "links": [
@@ -1250,7 +1250,7 @@ var topologyData = {
         }
     ]
 };
-```
+</pre>
 
 </details>
 
@@ -1513,7 +1513,7 @@ The previous version becomes cached. The current topology looks as follows:
 <details>
 <summary>Diff topology file diff_topology.js based on their comparison.</summary>
 
-```javascript
+<pre>
 
 var topologyData = {
     "links": [
@@ -1736,7 +1736,7 @@ var topologyData = {
         }
     ]
 };
-```
+</pre>
 
 </details>
 
