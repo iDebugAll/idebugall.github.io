@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Automation, Programmability, and Common Sense.
+NetDevOps, Programming, and Common Sense.
 
 ### Contact me
 
