@@ -12,4 +12,8 @@ NetDevOps, Programming, and Common Sense.
 
 ### Contact me
 
-e-mail: [iDebugAll@gmail.com](mailto:idebugall@gmail.com)
+<div class="about-me-contacts">
+  <div>
+    <p>e-mail: <a href=mailto:idebugall@gmail.com>iDebugAll@gmail.com</a></p>
+  </div>
+</div>
