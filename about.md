@@ -4,7 +4,14 @@ title: About
 permalink: /about/
 ---
 
-NetDevOps, Programming, and Common Sense.
+My name is Igor Korotchenkov. To date, I'm a UC Technical Leader for a financial company in Moscow, Russia.<br/>
+<br/>
+I have been working in enterprise IT since 2011.<br/>
+Over time, I built a solid expertise in multiple domains like: UC&Collaboration, Network Tech, Automation&NetDevOps.<br/>
+<br/>
+In this blog, I am sharing interesting cases and my experience.<br/>
+Please feel free to share your thoughts and feedback.
+
 
 ### See also
 
