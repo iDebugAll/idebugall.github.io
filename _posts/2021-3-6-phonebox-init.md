@@ -105,7 +105,7 @@ An obvious question is "What is NetBox?" A comprehensive answer from its develop
 > - **Data circuits** - Long-haul communications circuits and providers
 > - **Secrets** - Encrypted storage of sensitive credentials
 
-NetBox is designed as the Network Source-of-Truth. Everything in NetBox is an object, and *almost* everything is accessible via API that provides great opportunities for NetBox integration with external systems. There is a relational database and data model behind NetBox objects. NetBox is well [documented](https://netbox.readthedocs.io/en/stable/) and has great [community](https://join.slack.com/t/netdev-community/shared_invite/zt-mtts8g0n-Sm6Wutn62q_M4OdsaIycrQ) around it. Not suprisingly, the popularity of NetBox keep groing worldwide.
+NetBox is designed as the Network Source-of-Truth. Everything in NetBox is an object, and *almost* everything is accessible via API that provides great opportunities for NetBox integration with external systems. There is a relational database and data model behind NetBox objects. NetBox is well [documented](https://netbox.readthedocs.io/en/stable/) and has great [community](https://join.slack.com/t/netdev-community/shared_invite/zt-mtts8g0n-Sm6Wutn62q_M4OdsaIycrQ) around it. Not suprisingly, the popularity of NetBox keep growing worldwide.
 
 You might have noticed that the list above already covers several categories from the list of Voice and UC documentation. PBXs, SBCs, Gateways, MCUs, and many other Voice and UC boxes are **Devices**. You can usually find them installed into the **Equipment Racks** below the ToR switches. They are interconnected with **Connections** and may terminate some **Data Circuits** carrying Voice signaling and media from the Telephony Service **Providers**. Some of Voice and UC functions may be running as **Virtual Machines**. And all (unless you are using electromechanical PBXs) Voice and UC infrastructure components use **IP-addresses**.
 
@@ -116,7 +116,7 @@ So I introduce the [PhoneBox](https://github.com/iDebugAll/phonebox_plugin) plug
 ## PhoneBox Plugin
 
 This plugin is intended to bridge the gap between general NetBox network data models and those of Voice and UC world.
-I started development recently and already implemented **Phone Numbers**. It provides some immediate value and allows you to manage PSTN DIDs and internal extensions using NetBox. Some [feature requests](https://github.com/netbox-community/netbox/issues/1893) from the NetBox community to add support for such abstractions were already there.
+I started development recently and already implemented **Phone Numbers**. It provides some instant value and allows you to manage PSTN DIDs and internal extensions using NetBox. Some [feature requests](https://github.com/netbox-community/netbox/issues/1893) from the NetBox community to add support for such abstractions were already there.
 
 Each Phone Number consists of the following attributes:
 
