@@ -14,7 +14,7 @@ documentation?
 
 Sounds painfully familiar? I have got something that might help.
 
-</cut>
+<cut/>
 
 TLDR: I developed a [new plugin](https://github.com/iDebugAll/phonebox_plugin) for [NetBox](https://github.com/netbox-community/netbox) to manage phone numbers and more. Using NetBox as Voice and UC Source of Truth might be a good idea.
 
