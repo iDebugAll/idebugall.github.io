@@ -85,7 +85,9 @@ Souce-of-Truth contains a desirable state of your infrastructure. The purpose of
 
 It is vital to notice that moving from the traditional workflows to the Source-of-Trust and Infrastructure-as-Code does not has to be done in a single breaking step. It is possible to migrate the processes and procedures gradually. Rebuilding the documentation framework might be a good starting point.
 
-These concepts are already widely used by DevOps engineers.<br/>
+Well, with [enough time and perseverance](https://xkcd.com/505/), you can implement the ultimately complex scenarios inside MS Excel as its formulas [are Turing-complete](https://www.techrepublic.com/article/microsoft-turning-excel-into-a-turing-complete-programming-language/). Supporting and maintaining such a solution might be a nightmare. An ability to integrate it with the outer systems will also be limited. That leads us to the need for specialized tools.
+
+These tools and concepts are already widely used by DevOps engineers.<br/>
 Being applied to Networks, NetDevOps has greatly evolved during the past few years.<br/>
 I believe all these practices are applicable to the core UC domain as well. Not to mention that UC components might even share the platforms with regular Network functions. Initial provisioning steps for an SBC and a Router or a Switch are very similar. Automating BGP peering is not too far from automating SIP trunking.<br/>
 Many best practices and tools from the NetDevOps are transferable to the UC domain. One of such tools is NetBox.
@@ -93,7 +95,7 @@ Many best practices and tools from the NetDevOps are transferable to the UC doma
 
 ## Why NetBox
 
-An obvious question is "What is NetBox?" A comprehensive answer from its developers:
+And an obvious question is "What is NetBox?" A comprehensive answer from its developers:
 
 >NetBox is an open source web application designed to help manage and document computer networks. Initially conceived by the network engineering team at DigitalOcean, NetBox was developed specifically to address the needs of network and infrastructure engineers. It encompasses the following aspects of network management:
 >
@@ -105,11 +107,17 @@ An obvious question is "What is NetBox?" A comprehensive answer from its develop
 > - **Data circuits** - Long-haul communications circuits and providers
 > - **Secrets** - Encrypted storage of sensitive credentials
 
-NetBox is designed as the Network Source-of-Truth. Everything in NetBox is an object, and *almost* everything is accessible via API that provides great opportunities for NetBox integration with external systems. There is a relational database and data model behind NetBox objects. NetBox is well [documented](https://netbox.readthedocs.io/en/stable/) and has great [community](https://join.slack.com/t/netdev-community/shared_invite/zt-mtts8g0n-Sm6Wutn62q_M4OdsaIycrQ) around it. Not suprisingly, the popularity of NetBox keep growing worldwide.
+NetBox is designed as the Network Source-of-Truth. Everything in NetBox is an object, and *almost* everything is accessible via API that provides great opportunities for NetBox integration with external systems. There are a relational database and data model behind NetBox objects. NetBox is well [documented](https://netbox.readthedocs.io/en/stable/) and has great [community](https://join.slack.com/t/netdev-community/shared_invite/zt-mtts8g0n-Sm6Wutn62q_M4OdsaIycrQ) around it. Not surprisingly, the popularity of NetBox keeps growing worldwide. Chances are, your Network team is already aware of NetBox.
 
 You might have noticed that the list above already covers several categories from the list of Voice and UC documentation. PBXs, SBCs, Gateways, MCUs, and many other Voice and UC boxes are **Devices**. You can usually find them installed into the **Equipment Racks** below the ToR switches. They are interconnected with **Connections** and may terminate some **Data Circuits** carrying Voice signaling and media from the Telephony Service **Providers**. Some of Voice and UC functions may be running as **Virtual Machines**. And all (unless you are using electromechanical PBXs) Voice and UC infrastructure components use **IP-addresses**.
 
 But some critical points like **Phone Numbers**, ***Voice*** **Circuits**, and **Call Routing** are missing. Fortunately, NetBox provides extremely powerful extensibility feature called [Plugins](https://netbox.readthedocs.io/en/stable/plugins/). It allows you to extend the core NetBox data schema and embed new features. Combined with native NetBox data models, such a plugin would provide you with a full set of necessary abstractions to describe your Voice and UC deployment.
+
+Some of the primary benefits of this approach:
+- It simplifies the modeling of the cross-domain relations and dependencies. UC is highly dependant on the underlying Network infrastructure.
+- Unified documentation and Source of Truth framework for Network and *Unified* Communications provides you with full visibility of your infrastructure.
+- Common tools may simplify cross-team communications.
+- Reporting becomes more agile and powerful.
 
 So I introduce the [PhoneBox](https://github.com/iDebugAll/phonebox_plugin) plugin for NetBox.
 
