@@ -4,13 +4,21 @@ title: About
 permalink: /about/
 ---
 
-My name is Igor Korotchenkov. To date, I'm a UC Technical Leader for a financial company in Moscow, Russia.<br/>
-<br/>
-I have been working in enterprise IT since 2011.<br/>
-Over time, I built a solid expertise in multiple domains like: UC&Collaboration, Network Tech, Automation&NetDevOps.<br/>
-<br/>
-In this blog, I am sharing interesting cases and my experience.<br/>
-Please feel free to share your thoughts and feedback.
+### Hi there 👋
+
+I'm a seasoned technical leader with over a decade of experience in enterprise IT, specializing in driving innovation and delivering strategic outcomes. Recognized as a Cisco Champion (2021-2022) and a UAE Golden Visa holder for Specialized Talent, I’ve successfully led teams and initiatives across key domains:
+
+* 🤖 NetDevOps and Automation
+* 🕸 Networks
+* 🛠 IT Infrastructure
+* ☎️ Unified Communications & Collaboration
+
+</br>
+Fluent in both Tech and Corp Speak, I excel at bridging technical innovation with organizational priorities to deliver impactful results. I prioritize collaboration, effective communication, and strategic thinking to drive successful outcomes. Outside of work, I enjoy traveling, surfing, continuous learning, and sharing knowledge with the community.</br>
+
+</br>
+
+DISCLAIMER: All code shared here was developed by me for fun, in my free time, and using my own resources.
 
 
 ### See also
